@@ -190,7 +190,7 @@ class ServerlessAppsyncPlugin {
         case 'AMAZON_DYNAMODB':
           config = {
             dynamodbConfig: {
-              awsRegion: resolvedConfig.region,
+              awsRegion: ds.config.region || resolvedConfig.region,
               tableName: ds.config.tableName,
             },
           };
@@ -203,7 +203,7 @@ class ServerlessAppsyncPlugin {
         case 'AMAZON_ELASTICSEARCH':
           config = {
             elasticsearchConfig: {
-              awsRegion: resolvedConfig.region,
+              awsRegion: ds.config.region || resolvedConfig.region,
               endpoint: ds.config.endpoint,
             },
           };
@@ -251,7 +251,7 @@ class ServerlessAppsyncPlugin {
         case 'AMAZON_DYNAMODB':
           config = {
             dynamodbConfig: {
-              awsRegion: resolvedConfig.region,
+              awsRegion: ds.config.region || resolvedConfig.region,
               tableName: ds.config.tableName,
             },
           };
@@ -264,7 +264,7 @@ class ServerlessAppsyncPlugin {
         case 'AMAZON_ELASTICSEARCH':
           config = {
             elasticsearchConfig: {
-              awsRegion: resolvedConfig.region,
+              awsRegion: ds.config.region || resolvedConfig.region,
               endpoint: ds.config.endpoint,
             },
           };
