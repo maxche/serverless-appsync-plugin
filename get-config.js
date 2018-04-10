@@ -41,7 +41,7 @@ module.exports = (config, provider, servicePath) => {
     name: config.name || 'api',
     apiId: config.apiId,
     apiKey: config.apiKey,
-    region: provider.region,
+    region: config.region || provider.region,
     authenticationType: config.authenticationType,
     schema: schemaContent,
     userPoolConfig: config.userPoolConfig,
